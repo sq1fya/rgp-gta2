@@ -2,11 +2,11 @@ const scrollelement = window.document.scrollingElement || window.document.body |
 
 document.getElementById("sectionnumber").onclick = function() {
   downSection();
-};
-
-okno = document.getElementById("sectionnumber")
-
-okno.onclick = function(){
+  changecolor();
+}
+  
+ function changecolor(){
+    var okno = document.getElementById("sectionnumber")
   okno.classList.add("spin");
 }
 
