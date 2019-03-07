@@ -1,5 +1,16 @@
 const scrollelement = window.document.scrollingElement || window.document.body || window.document.document
 
+// CLICK
+// window.onclick = downSection;
+
+// function initElement() {
+//   var p = document.getElementById("up");
+//   p.onclick = downSection;
+// }
+
+document.getElementById("sectionnumber").onclick = function() {downSection()};
+
+
 // Sections are zero indexed to match array from getElementsByClassName
 var scroll = {
   activesection: 0,
@@ -9,7 +20,7 @@ var scroll = {
 }
 
 var downSection = () => {
-  if (scroll.activesection < 4) {
+  if (scroll.activesection < 3) {
     ++scroll.activesection
     updateSectionNumber(scroll.activesection)
     scrollToSection(scroll.activesection)
@@ -122,3 +133,8 @@ window.addEventListener('touchmove', function(e) {
 window.addEventListener('resize', function(e) {
   scrollToSection(scroll.activesection)
 }, false)
+
+window.addEventListener("load", function(event) {
+  scrollToSection(0);
+  console.log("All resources finished loading!");
+});
