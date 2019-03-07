@@ -1,15 +1,14 @@
 const scrollelement = window.document.scrollingElement || window.document.body || window.document.document
 
-// CLICK
-// window.onclick = downSection;
+document.getElementById("sectionnumber").onclick = function() {
+  downSection();
+};
 
-// function initElement() {
-//   var p = document.getElementById("up");
-//   p.onclick = downSection;
-// }
+okno = document.getElementById("sectionnumber")
 
-document.getElementById("sectionnumber").onclick = function() {downSection()};
-
+okno.onclick = function(){
+  okno.classList.add("spin");
+}
 
 // Sections are zero indexed to match array from getElementsByClassName
 var scroll = {
@@ -136,5 +135,5 @@ window.addEventListener('resize', function(e) {
 
 window.addEventListener("load", function(event) {
   scrollToSection(0);
-  console.log("All resources finished loading!");
+  console.log("finished loading page!");
 });

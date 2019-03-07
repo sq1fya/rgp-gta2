@@ -2,6 +2,10 @@
 *  https://visme.co/blog/color-combinations/
 */
 
+.spin {
+  background-color: red !important;
+}
+
 html, body {
   margin: 0;
   padding: 0;
