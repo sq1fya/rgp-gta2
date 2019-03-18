@@ -67,3 +67,15 @@ body::-webkit-scrollbar {
 .section:nth-child(5n) {
   background-color: #F05837;
 }
+
+img {
+   float: left;
+  }
+
+.roadLamesSideUpsidedown {
+  transform: rotate(180deg);
+}
+.column {
+  display: flex;
+  flex-direction: row;
+}
